@@ -26,7 +26,7 @@ protected:
 	void Turn(float Value);
 	void LockUp(float Value);
 private:
-	UPROPERTY(VisibleAnyWhere, Category = Camera);
+	UPROPERTY(EditAnyWhere, Category = Camera);
 	class USpringArmComponent* CameraBoom;
 	UPROPERTY(VisibleAnyWhere, Category = Camera);
 	class UCameraComponent* FollowCamera;
