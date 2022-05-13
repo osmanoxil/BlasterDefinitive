@@ -34,9 +34,11 @@ private:
 	UPROPERTY(VisibleAnyWhere, Category = "Weapon Properties")
 	class USphereComponent* AreaSphere;
 
-	UPROPERTY(VisibleAnyWhere)
+	UPROPERTY(VisibleAnyWhere, Category = "Weapon Properties")
 	EweaponState WeaponState;
-
+	
+	UPROPERTY(VisibleAnyWhere, Category = "Weapon Properties")
+	class UWidgetComponent* PickupWidget;
 public:	
 	
 

@@ -46,13 +46,6 @@ void UOverheadWidget::ShowPlayerNetRole(APawn* InPawn)
 	SetDisplayText(RemoteRoleString);
 }
 
-/*void UOverheadWidget::ShowPlayerName(APawn* InPawn)
-{
-	APlayerState* PlayerState = InPawn->GetPlayerState();
-	FString  PlayerNameStr = PlayerState->GetPlayerName();
-	FString LocalPlayerName = FString::Printf(TEXT("Player Name: %s"), *PlayerNameStr);
-	SetPlayerNameText(LocalPlayerName);
-}*/
 
 void UOverheadWidget::OnLevelRemovedFromWorld(ULevel* InLevel, UWorld* InWorld)
 {
