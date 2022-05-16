@@ -19,6 +19,7 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual void GetLifetimeReplicatedProps(TArray< FLifetimeProperty >& OutLifetimeProps) const override;
+	virtual void PostInitializeComponents() override;
 
 protected:
 	
@@ -27,6 +28,7 @@ protected:
 	void MoveRight(float Value);
 	void Turn(float Value);
 	void LockUp(float Value);
+	void EquipButtonPressed();
 private:
 	UPROPERTY(EditAnyWhere, Category = Camera);
 	class USpringArmComponent* CameraBoom;
@@ -40,6 +42,9 @@ private:
 
 	UFUNCTION()
 	void OnRep_OnverlappingWeapon(AWeapon* LastWeapon);
+
+	UPROPERTY(VisibleAnyWhere)
+	class UCombatComponent* Combat;
 
 public:	
 	void SetOverlappingWeapon(AWeapon* Weapon);
