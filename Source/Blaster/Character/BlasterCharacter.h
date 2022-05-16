@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "BlasterCharacter.generated.h"
-
+#include "Components/SkeletalMeshComponent.h"
 
 UCLASS()
 class BLASTER_API ABlasterCharacter : public ACharacter
@@ -45,6 +45,10 @@ private:
 
 	UPROPERTY(VisibleAnyWhere)
 	class UCombatComponent* Combat;
+
+	UFUNCTION(Server, Reliable)
+	void ServerEquipButtonPressed();
+
 
 public:	
 	void SetOverlappingWeapon(AWeapon* Weapon);
