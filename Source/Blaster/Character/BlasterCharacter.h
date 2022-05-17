@@ -4,9 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "BlasterCharacter.generated.h"
 #include "Components/SkeletalMeshComponent.h"
-
+#include "BlasterCharacter.generated.h"
 UCLASS()
 class BLASTER_API ABlasterCharacter : public ACharacter
 {
@@ -52,5 +51,5 @@ private:
 
 public:	
 	void SetOverlappingWeapon(AWeapon* Weapon);
-
+	bool IsWeaponEquipped();
 };
