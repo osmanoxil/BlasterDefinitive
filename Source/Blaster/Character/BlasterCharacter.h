@@ -28,6 +28,7 @@ protected:
 	void Turn(float Value);
 	void LockUp(float Value);
 	void EquipButtonPressed();
+	void CrouchButtonPressed();
 private:
 	UPROPERTY(EditAnyWhere, Category = Camera);
 	class USpringArmComponent* CameraBoom;
