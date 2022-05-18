@@ -29,6 +29,8 @@ protected:
 	void LockUp(float Value);
 	void EquipButtonPressed();
 	void CrouchButtonPressed();
+	void AimButtonPressed();
+	void AimButtonReleased();
 private:
 	UPROPERTY(EditAnyWhere, Category = Camera);
 	class USpringArmComponent* CameraBoom;
@@ -53,4 +55,5 @@ private:
 public:	
 	void SetOverlappingWeapon(AWeapon* Weapon);
 	bool IsWeaponEquipped();
+	bool IsAiming();
 };
